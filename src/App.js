@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link, useLocation } from "react-router-dom";
 import { StateMachineProvider, createStore } from "little-state-machine";
+import {useForm, useFieldArray, useWatch} from 'react-hook-form'
 
 //Components Per Page
 import Step1 from "./Components/Step1";
@@ -14,6 +15,8 @@ createStore({
     firstName: "",
     lastName: "",
     typeUser: null,
+    qualifications: []
+
   },
 });
 
